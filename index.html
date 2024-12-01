@@ -9,13 +9,14 @@
     body {
       background-color: lightpink;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
     
     p {
       font-family: Arial;
-      font-size: 30px;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -23,8 +24,11 @@
   <p>
     for testing screen size only
   </p>
+  <p class="js-size-report1"></p>
+  <p class="js-size-report2"></p>
   <script>
-    alert(`This device have width ${window.innerWidth}px\nThis device have height ${window.innerHeight}px`);
+    document.querySelector('.js-size-report1').innerHTML = `This device have width ${window.innerWidth}px`
+    document.querySelector('.js-size-report2').innerHTML = `This device have width ${window.innerHeight}px`
   </script>
 </body>
 </html>
